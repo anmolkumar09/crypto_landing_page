@@ -1,38 +1,378 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Poppins:wght@300;400;500&display=swap");
+:root {
+  --primary_color: rgba(25, 25, 25, 0.92);
+  --color: #fff;
+  --active_color: #5ba14c;
+  --secondary_color: rgba(25, 25, 25, 0.612);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: var(--primary_color);
+}
+/* ---------- Header Section -------------- */
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  color: var(--color);
+  font-size: 16px;
+  height: 9vh;
+}
+header img {
+  width: 35px;
+}
+header .img_container {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  color: var(--active_color);
+}
+header .img_container p {
+  padding: 5px;
+}
+
+header .left_links a {
+  margin: 0 15px;
+  text-decoration: none;
+
+  color: var(--color);
+}
+
+header .right_links {
+  display: flex;
+  align-items: center;
+}
+header .right_links span {
+  margin: 5px;
+}
+header .right_links .discordImg img {
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.connectBtn button {
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 5px;
+  width: 150px;
+  font-weight: 500;
+  text-transform: capitalize;
+  background-color: var(--active_color);
+  color: var(--color);
+  cursor: pointer;
+}
+.connectBtn button:hover {
+  transition: 0.3s ease-in-out;
+  background-color: rgba(0, 255, 255, 0.829);
+}
+
+/*------------- Section Part Css ---------- */
+
+.Section_container {
+  color: var(--color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  /* grid-gap: 5rem; */
+  padding: 3rem;
+}
+.Section_container .wrapper .active {
+  color: var(--active_color);
+}
+.Section_container #wrapper1 {
+  width: 35vw;
+  padding: 0.5rem;
+  line-height: 2;
+}
+.Section_container img {
+  width: 100px;
+}
+.Section_container .boxText {
+  background-color: var(--secondary_color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 40vw;
+  height: 10vh;
+  padding: 1rem;
+  height: 25vh;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+#wrapper2 {
+  background-color: var(--secondary_color);
+  padding: 1rem;
+  width: 40vw;
+  border-radius: 1rem;
+}
+
+#wrapper2 .box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+#wrapper2 .wrapper2_btn {
+  margin: 1rem 0;
+}
+#wrapper2 .wrapper2_btn a {
+  text-decoration: none;
+  padding: 0.5rem;
+  background-color: var(--active_color);
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+  color: var(--color);
+}
+#wrapper2 .wrapper2_btn a:hover {
+  background-color: rgba(0, 255, 255, 0.829);
+  transition: 0.3s ease-in-out;
+}
+
+/* ---------------- Section2 part CSS ------------ */
+
+.section2_container {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section2_container .wrapper {
+  color: var(--color);
+  background-color: var(--secondary_color);
+  width: 90%;
+  margin-left: 7rem;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 70vh;
+}
+.section2_container .wrapper img {
+  width: 100px;
+  border-radius: 50%;
+}
+.section2_container .wrapper .main_text span img {
+  width: 30px;
+  margin-left: 0.5rem;
+}
+.section2_container .wrapper .main_text h2,
+p,
+h3 {
+  padding: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section2_container .wrapper .bottom_text .text1,
+.text2 {
+  margin: 0.2rem;
+  text-align-last: left;
+}
+.section2_container .wrapper .bottom_text .text1 .active {
+  margin-left: 5rem;
+}
+.section2_container .wrapper .bottom_text span {
+  margin-left: 3rem;
+}
+.section2_container .wrapper .button {
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  background-color: #5ba14c;
+}
+.section2_container .wrapper .button a {
+  text-decoration: none;
+  color: var(--color);
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+.section2_container .wrapper .button:hover {
+  background-color: rgba(0, 255, 255, 0.829);
+  transition: 0.3s ease-in-out;
+}
+/*---------------- Footer Part ------------ */
+
+.footer_container {
+  color: var(--color);
+  text-align: center;
+  padding: 1rem;
+}
+.footer_container .wrapper {
+  width: 40vw;
+  background-color: var(--secondary_color);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.footer_container img {
+  width: 100px;
+  margin: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*----------- Footer Links ----------- */
+.footerLinks {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin: 0 3rem;
+  padding: 1rem;
+}
+.footerLinks p {
+  color: var(--color);
+}
+.footerLinks .links img {
+  padding: 0.2rem;
+  width: 30px;
+}
+.footerLinks .links a {
+  cursor: pointer;
+  padding: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* --------- Responsive Part ----------- */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1024px) {
+  /*-------- Header Section --------*/
+
+  header .img_container p {
+    font-size: 0.7rem;
   }
-  to {
-    transform: rotate(360deg);
+  header .left_links {
+    font-size: 0.7rem;
+  }
+  header .right_links img {
+    width: 25px;
+  }
+  header .right_links span {
+    font-size: 10px;
+  }
+  header .connectBtn button {
+    width: 100px;
+    font-size: 10px;
+  }
+
+  /*-------- section_container part ----- */
+
+  .Section_container .boxText {
+    height: 19vh;
+    font-size: 2.4rem;
+  }
+  .Section_container #wrapper1 {
+    width: 44vw;
+  }
+  .Section_container img {
+    width: 60px;
+  }
+  #wrapper2 {
+    width: 43vw;
+  }
+
+  /*-------- section2_container part ----- */
+  .section2_container .wrapper {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 768px) {
+  /*-------- Header Section --------*/
+  header .img_container img {
+    width: 50px;
+    margin-left: 8rem;
+  }
+  header .img_container p {
+    font-size: 0.8rem;
+  }
+  header .left_links {
+    font-size: 0.7rem;
+  }
+  header .right_links img {
+    width: 25px;
+  }
+  header .right_links span {
+    font-size: 10px;
+  }
+  header .connectBtn button {
+    width: 100px;
+    font-size: 10px;
+  }
+
+  /*-------- section_container part ----- */
+
+  .Section_container .boxText {
+    height: 19vh;
+    font-size: 1.3rem;
+  }
+  .Section_container #wrapper1 {
+    width: 44vw;
+  }
+  .Section_container img {
+    width: 60px;
+  }
+  #wrapper2 {
+    width: 62vw;
+  }
+
+  /*-------- section2_container part ----- */
+  .section2_container .wrapper {
+    height: 85vh;
+  }
+}
+
+@media (max-width: 415px) {
+  /*-------- Header Section --------*/
+  header {
+    height: 50vh;
+    width: 150%;
+  }
+  header .img_container img {
+    width: 200px;
+  }
+  header .img_container p {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+  header .left_links {
+    display: none;
+  }
+  header .right_links {
+    display: none;
+  }
+
+  header .connectBtn {
+    display: none;
+  }
+
+  /*-------- section_container part ----- */
+  .Section_container {
+    display: block;
+    padding: 30px;
+  }
+
+  .Section_container .wrapper .active {
+    width: 150%;
+    font-size: 2.5rem;
+    text-align: justify;
+  }
+  .Section_container .wrapper h2,
+  h1 {
+    font-size: 3rem;
+  }
+  .Section_container .boxText {
+    height: 19vh;
+    font-size: 3rem;
+    width: 170%;
+    height: 65vh;
+  }
+  .Section_container #wrapper1 {
+    width: 60vw;
+  }
+  .Section_container img {
+    width: 60px;
+  }
+  #wrapper2 {
+    width: 170vw;
+  }
+
+  /*-------- section2_container part ----- */
+  .section2_container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 85vh;
   }
 }
